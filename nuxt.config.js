@@ -12,11 +12,11 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
-  },
+    ],
   /*
   ** Customize the progress bar color
   */
+
   loading: { color: '#3B8070' },
 
   modules:[
@@ -50,9 +50,15 @@ module.exports = {
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
           exclude: /(node_modules)/
-        })
+         })
+        }
       }
     }
-  }
+  },
+router:{
+  middleware:[
+    'auth'
+  ]
+}
 }
 
